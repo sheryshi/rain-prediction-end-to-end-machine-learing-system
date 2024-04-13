@@ -1,0 +1,33 @@
+<htmll>
+    <head>
+        <title>user input</title>
+        <link rel="stylesheet" href="style.css">
+    
+    </head>
+    <body >
+        <div class="container">
+            <h1><u>
+            RAIN PREDICTION OF JHARKHAND
+        </u></h1><br>
+        <form action="{{url_for('predict_datapoint')}}" method="post">
+            
+            <label >Maximum Temperature    :</label>
+                <input type="number" name="tempm" placeholder="tempm"  requird="required">
+            <label>Minimum Temperature:</label>
+                <input type="number" name="mint" placeholder="mint" required="required">
+            <label for="">Wind speed:</label>
+                <input type="number" name="ws" placeholder="ws" required="required">
+            <label for="">Dew speed:</label>
+                <input type="number" name="dp" placeholder="dp" required="required">
+            <label for="">Relative humidity:</label>
+                <input type="number" name="rh" placeholder="rh" required="required">
+            <label for="">Air pressure:</label>
+                <input type="number" name="ap" placeholder="ap" required="required">
+           
+            <button type="submit" class="btn btn-primary btn-block btn-large">Pedict </button>
+        </form>
+        <h2>THE PRECIPITATION IS {{result}}
+        </h2>
+        </div>
+    </body>
+</html>
